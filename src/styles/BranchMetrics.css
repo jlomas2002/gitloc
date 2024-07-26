@@ -1,0 +1,48 @@
+/* #branchesContainer {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	margin: 0;
+	color: white;
+	font-family: 'consolas';
+	font-size: larger;
+	align-items: center;
+	border-radius: 5px;
+	height: 40px;
+	padding: 0;
+}
+
+#branchesWrapper {
+	background-color: #29A0B1;
+	height: 500px;
+	border-radius: 5px;
+	margin-left: 100px;
+	margin-right: 100px;
+	padding: 0;
+}
+
+.branchName {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	border-radius: 10px;
+}
+
+.selected {
+	background-color: #29A0B1;
+	border-top: 1px solid #000;
+}
+
+.unselected {
+	cursor: pointer;
+	background-color: #98D7C2;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.unselected:hover {
+	background-color: #167D7F
+} */

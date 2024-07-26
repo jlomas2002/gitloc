@@ -1,0 +1,39 @@
+.mainContainer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+	margin-inline: 8%;
+}
+
+.detailsContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+}
+
+.contributorsList {
+	list-style-type: none;
+	padding: 0;
+}
+
+.repoName {
+	font-size: Larger;
+}
+
+.repoOwner {
+	font-size: medium;
+}
+
+.detailsText {
+	font-family: 'consolas';
+}
+
+.detailsLabel {
+	color: grey;
+	font-size: small;
+}
+
+.labelAndDetail {
+	display: block;
+	border: 1px solid black;
+}
