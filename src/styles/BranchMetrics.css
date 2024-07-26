@@ -1,35 +1,31 @@
-/* #branchesContainer {
+.branchMetricsContainer {
+	margin: 0 0 5% 0;
+	background-color: #29A0B1;
+	border-radius: 5px;
+	margin-inline: 10%;
+	border: 1px solid red;
+}
+
+.branchNamesContainer {
+	margin: 0;
+	padding: 0;
 	display: flex;
 	justify-content: space-around;
-	list-style-type: none;
-	margin: 0;
-	color: white;
-	font-family: 'consolas';
-	font-size: larger;
 	align-items: center;
+	list-style-type: none;
 	border-radius: 5px;
-	height: 40px;
-	padding: 0;
+	border: 1px solid blue;
 }
 
-#branchesWrapper {
-	background-color: #29A0B1;
-	height: 500px;
-	border-radius: 5px;
-	margin-left: 100px;
-	margin-right: 100px;
-	padding: 0;
-}
 
 .branchName {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex: 1;
+	text-align: center;
+	padding: 5px 0 5px 0;
+	border: 1 px solid purple;
 	border-radius: 10px;
+	font-family: 'consolas';
+	font-size: larger;
+	width: 100%;
 }
 
 .selected {
@@ -45,4 +41,4 @@
 
 .unselected:hover {
 	background-color: #167D7F
-} */
+}

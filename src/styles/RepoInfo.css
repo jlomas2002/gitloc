@@ -1,27 +1,44 @@
 .mainContainer {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 5%;
-	margin-inline: 8%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	margin: 0 8% 5% 8%;
 }
 
-.detailsContainer {
+.infoContainer {
 	display: flex;
-	flex-direction: column;
-	padding: 5px;
+	gap: 10%;
 }
 
 .contributorsList {
+	display: inline-grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	list-style-type: none;
+	gap: 10px;
+	margin: 0;
+	padding-inline: 5px;
+	border-top: 1px solid grey;
+}
+
+.contributor {
 	padding: 0;
+	margin: 0;
 }
 
 .repoName {
-	font-size: Larger;
+	font-size: 1.7em;
+	color: #29A0B1;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
 }
 
 .repoOwner {
 	font-size: medium;
+	margin: 0;
+	border-top: 1px solid grey;
 }
 
 .detailsText {
@@ -31,9 +48,12 @@
 .detailsLabel {
 	color: grey;
 	font-size: small;
+	margin: 0;
 }
 
-.labelAndDetail {
-	display: block;
-	border: 1px solid black;
+.labelAndDetailsContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

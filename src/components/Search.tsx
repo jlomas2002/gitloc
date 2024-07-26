@@ -9,9 +9,9 @@ import { isRepoLink } from '../utilities/utils';
 import Loading from './Loading';
 import NoSearchYet from './NoSearchYet';
 import RepoMetricsDisplay from './RepoMetricsDisplay';
+import InvalidRepo from './InvalidRepo';
 
 import '../styles/Search.css';
-import InvalidRepo from './InvalidRepo';
 
 const MaxNumBranchesToLoad = 1;
 
@@ -57,16 +57,17 @@ function Search() {
 			repoData.branches[i].metrics = await getBranchMetrics(repoData.name, repoData.owner, repoData.branches[i].sha);
 		}
 
+
 		setRepo(repoData);
 		setIsLoading(false);
 	}
 
 	return (
 		<div>
-			<form onSubmit={runRepoSearch}>
-				<input type="search" className='searchInput' name="repoSearch" placeholder="e.g https://github.com/jlomas2002/popp"
+			<form className="searchContainer" onSubmit={runRepoSearch}>
+				<input type="search" className='searchInput' name="repoSearch" placeholder="e.g https://github.com/jlomas2002/gitloc"
 					value={repoLink} onChange={(e) => setRepoLink(e.target.value)} />
-				<input id="searchSubmit" type="submit" value="Go" />
+				<input className="searchSubmit" type="submit" value="Go" />
 			</form>
 			{isLoading ? <Loading /> :
 				repo && repo.branches.length > 0 ? <RepoMetricsDisplay repo={repo} /> :

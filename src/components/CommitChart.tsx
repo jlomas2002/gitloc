@@ -1,4 +1,3 @@
-import { ICommitProp, IWeeklyCommitActivity } from '../utilities/types';
 import { Line } from 'react-chartjs-2';
 import {
 	Chart as ChartJS,
@@ -9,9 +8,14 @@ import {
 	Title,
 	Tooltip,
 	Legend,
-	ScriptableContext
+	ScriptableContext,
+	Tick,
+	Scale,
+	CoreScaleOptions
 } from 'chart.js';
 import '../styles/CommitChart.css'
+
+import { ICommitProp, IWeeklyCommitActivity } from '../utilities/types';
 
 
 ChartJS.register(
@@ -27,13 +31,24 @@ ChartJS.register(
 const options = {
 	responsive: true,
 	maintainAspectRatio: true,
+	aspectRatio: 3,
+	scales: {
+		x: {
+			ticks: {
+				// Include a dollar sign in the ticks
+				callback: function (this: Scale<CoreScaleOptions>, tickValue: string | number, index: number, ticks: Tick[]): string {
+					return "1";
+				}
+			}
+		}
+	},
 	plugins: {
 		title: {
 			display: true,
 			text: 'Weekly Commit History',
 		},
 		legend: {
-			display: true,
+			display: false,
 			labels: {
 				color: 'black'
 			}

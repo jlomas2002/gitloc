@@ -1,7 +1,10 @@
-import { IRepoProps } from "../utilities/types";
 import { useState } from 'react';
-import { IBranch } from "../utilities/types";
+
+import { IRepoProps, IBranch } from "../utilities/types";
 import { getBranchMetrics } from "../utilities/branchMetrics";
+
+import Loading from './Loading';
+
 import '../styles/BranchMetrics.css';
 
 function BranchMetrics({ repo }: IRepoProps) {
@@ -21,8 +24,8 @@ function BranchMetrics({ repo }: IRepoProps) {
 	}
 
 	return (
-		<div id='branchesWrapper'>
-			<ul id='branchesContainer'>
+		<div className='branchMetricsContainer'>
+			<ul className='branchNamesContainer'>
 				{branches.map((branch) =>
 					<li key={branch.sha}
 						onClick={() => changeBranch(branch)}
@@ -35,10 +38,8 @@ function BranchMetrics({ repo }: IRepoProps) {
 					This branch has {selectedBranch.metrics.linesOfCode} lines of code!
 				</div>
 				:
-				<div>
-					Metrics are loading...
-				</div>}
-
+				<Loading />
+			}
 		</div>
 	);
 }

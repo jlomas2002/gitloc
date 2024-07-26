@@ -36,8 +36,8 @@ const codeFileTypes = [
 
 export function isCodeFile(filePath: string): boolean {
 	const [, fileType] = filePath.split('.');
-	return codeFileTypes.includes(fileType);
-	//return fileType == "cpp";
+	//return codeFileTypes.includes(fileType);
+	return fileType == "cpp";
 }
 
 export function isRepoLink(repoLink: string): boolean {
